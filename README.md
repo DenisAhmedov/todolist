@@ -9,6 +9,7 @@
 + Python 3.11
 + Django 4.1.7
 + Postgres
++ Docker
 
 
 ### Установка
