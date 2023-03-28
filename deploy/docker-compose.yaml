@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
-      - pg_data_todolist:/var/lib/postgresql/data
+      - todolist_pg_data:/var/lib/postgresql/data
     healthcheck:
       test: pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}
       interval: 5s
@@ -38,6 +38,6 @@ services:
 
 
 volumes:
-  pg_data_todolist:
+  todolist_pg_data:
 
 
