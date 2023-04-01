@@ -28,7 +28,7 @@ class LoginView(GenericAPIView):
         )):
             raise AuthenticationFailed
         login(request=request, user=user)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(ProfileSerializer(user).data, status=status.HTTP_201_CREATED)
 
 
 class ProfileView(RetrieveUpdateDestroyAPIView):
